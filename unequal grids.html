@@ -1,0 +1,54 @@
+
+            <!doctype html>
+            <html>
+            <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width,initial-scale=1">
+                <title>Simple Unequal Grids</title>
+                <style>
+                    body{font-family:Arial,Helvetica,sans-serif;background:#f3f4f6;color:#111;margin:20px}
+                    .wrap{max-width:900px;margin:0 auto}
+                    h1{font-size:18px;margin:0 0 12px}
+                    h2{font-size:14px;margin:18px 0 8px}
+
+                    /* Masonry-like using CSS columns (very simple) */
+                    .masonry{column-count:3;column-gap:12px}
+                    .card{background:#fff;margin:0 0 12px;padding:10px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.08);break-inside:avoid}
+
+                    /* Unequal column spans using CSS Grid */
+                    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+                    .cell{background:#fff;padding:10px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+                    .span-2{grid-column:span 2}
+
+                    @media (max-width:700px){
+                        .masonry{column-count:1}
+                        .grid{grid-template-columns:1fr}
+                        .span-2{grid-column:auto}
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="wrap">
+                    <h1>Simple Unequal Grids</h1>
+
+                    <h2>hi</h2>
+                    <div class="masonry">
+                        <div class="card">hi</div>
+                        <div class="card"hi</div>
+                        <div class="card">hi</div>
+                        <div class="card">hi</div>
+                        <div class="card">hi</div>
+                        <div class="card">hi</div>
+                    </div>
+
+                    <h2>Grid with Unequal Spans</h2>
+                    <div class="grid">
+                        <div class="cell span-2">hi</div>
+                        <div class="cell">hi</div>
+                        <div class="cell">hi</div>
+                        <div class="cell">hi</div>
+                        <div class="cell span-2">hi</div>
+                    </div>
+                </div>
+            </body>
+            </html>
