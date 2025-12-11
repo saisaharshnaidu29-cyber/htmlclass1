@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>loops and methods</h1>
+        <p> random numbers from 1 to 10</p>
+        <p id="result"></p>
+        <script>
+            function getRandomInt(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            let result = "";
+            for (let i = 0; i < 5; i++) {
+                result += getRandomInt(1, 10) + " ";
+            }
+
+            document.getElementById("result").innerText = result.trim();
+    </body>
+</html>
