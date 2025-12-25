@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            background-color: lightsalmon;
+            font-style: oblique;
+            
+        }
+    </style>
+    <body>
+        <h2>Javascript While Statement with Letters</h2>
+        <p id="number"></p>
+        <script>
+            var text = "";
+            var i = 0;
+            while (i < 10) {
+                text += "<br> the letter is " + String.fromCharCode(97 + i);
+                i++;
+            }
+            document.getElementById("number").innerHTML = text;
+        </script>
+    </body>
+</html>
