@@ -1,42 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
+<html>
 <body>
-    <div class="cointaner">
-<h2>Carousel example</h2>
-<div id="myCarousel" class="Carousel slide" data-ride="Carousel">
-<ol class="carousel-indicators">
-<li data-targets="#myCarousel" data-slide="0" class="actieve"></li>
-<li data-targets="#myCarousel" data-slide="1" class="actieve"></li>
-<li data-targets="#myCarousel" data-slide="2" class="actieve"></li>
-</ol>
-</div class="carousel-inner">
-    </div class="item actieve">
-    <div class="item">
-<img src="plant1.jpg" alt="plant1">
-    </div>
-    <div class="item">
-<img src="plant2.jpg" alt="plant2">
-    </div>
-    <div class="item">
-<img src="plant3.jpg" alt="plant3">
-    </div>
-    <a class="left carousel1-control" href="" data-slide="prev"></a>
-<span class="glyphicon glyphicon-chevron-left"></span>
-<span class="sr-only">previous</span>
-    </a>
-    <a class="right carousel1-control" href="#mycarousel1" data-slide="next">
-<span class="glyphicon glyphicon-chevron-right"></span>
-<span sr-only> next</span>
-</a>
+    <h1>this page shows an error message</h1>
+    <button type="button">click to show ERROR message</button>
+    <script>
+        document.querySelector("button").onclick = function() {
+            try {
+                throw new Error("An unexpected error has occurred.");
+            } catch (e) {
+                alert("ERROR: " + e.message);
+            }
+        };
+    </script>
 </body>
-</html> 
+</html>
