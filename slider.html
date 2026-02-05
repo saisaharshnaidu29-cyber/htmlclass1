@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <section>
+            <img class="mySlides" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/f8/5c/05/picture-lake.jpg?w=1200&h=-1&s=1" style="height: 500px;">
+           <img class="mySlides" src="https://hips.hearstapps.com/hmg-prod/images/ferrari-e-suv-2-copy-680287cac36b2.jpg?crop=1.00xw:0.838xh;0,0.0673xh" style="height: 500px;"> 
+        </section>
+        <script>
+            var myIndex = 0;
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.lenght; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if(myIndex > x.length) {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel , 2000);
+            }
+            carousel();
+        </script>
+    </body>
+</html>
