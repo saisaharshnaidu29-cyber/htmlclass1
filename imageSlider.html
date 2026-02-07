@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+            background-color: black;
+        }
+         h3 {
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+         .image-slider {
+            display: none;
+        }
+    </style>
+    <body>
+        <section>
+            <h3>image slider</h3>
+            <img class="image-slider"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVS3EawR3xd8QN9ibOjt2PkokfpzU8ZJLFRA&s" style="width: 90%; height: 60vh; object-fit: cover;" >
+            <img class="image-slider"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAy6hgMGgbnnzJfmUXk9gFLlK9CHEhtsgnA&s" style="width: 90%; height: 60vh; object-fit: cover;">
+            <img  class="image-slider"  src="https://destinationformula1.com/wp-content/uploads/2026/01/Red-Bull-Racing-2026-Livery.jpg" style="width: 90%; height: 60vh; object-fit: cover;">
+        </section>
+        <script>
+            var myIndex = 0;
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("image-slider");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if(myIndex > x.length) {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel, 3000);
+            }
+            carousel();
+        </script>
+    </body>
+</html>
