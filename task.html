@@ -1,0 +1,25 @@
+<h2>JavaScript async / await</h2>
+<h1 id="result"></h1>
+<style>
+    body {
+        font-style: oblique;
+        background-color: rgb(217, 255, 0);
+        font-variant: inherit;
+        float: right;
+        float: left;
+        float: inline-start;
+        color: rgba(2, 19, 252, 0.637);
+    }
+</style>
+<script>
+async function product(a, b) {
+    let response = a * b;   
+    display(response);
+}
+
+function display(value) {
+    document.getElementById("result").innerHTML = value;
+}
+
+product(5, 20);
+</script>
