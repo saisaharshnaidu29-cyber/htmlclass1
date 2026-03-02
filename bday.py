@@ -1,0 +1,5 @@
+print("friend 1: 19:12:13")
+print("friend 2: 18:05:42")
+print("friend 3: 20:30:00")
+print("friend 4: 17:45:30")
+print("friend 5: 21:00:15")
